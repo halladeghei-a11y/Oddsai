@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { simulateMatch } from "@/lib/simulation";
+import { simulateMatch } from "./simulation";
 const schema = z.object({
   homeLambda: z.number().min(0).max(8),
   awayLambda: z.number().min(0).max(8),
