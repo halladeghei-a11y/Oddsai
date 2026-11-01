@@ -4,7 +4,7 @@
  * to an official/authorized Stake API or partner feed for which you have credentials.
  * The app gracefully returns no odds when no authorized endpoint is configured.
  */
-import type { Match } from "../types";
+import type { Match } from "./src/lib/types";
 export async function getStakeOdds(_matchIds: string[]): Promise<Map<string, Match["odds"]>> {
   const base = process.env.STAKE_ODDS_API_BASE_URL;
   const key = process.env.STAKE_ODDS_API_KEY;
